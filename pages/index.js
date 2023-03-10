@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Link from 'next/link';
+
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -10,9 +12,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        <h1 className="title">
+          Read <Link href="/posts/first-post">this page!</Link>
         </h1>
+
 
         <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
@@ -60,7 +63,7 @@ export default function Home() {
         </a>
       </footer>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         main {
           padding: 5rem 0;
           flex: 1;
@@ -95,7 +98,7 @@ export default function Home() {
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
-      `}</style>
+      `}</style> */}
 
       <style jsx global>{`
         html,
@@ -109,6 +112,11 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
+
+        #__next {
+          width:100%;
+          height: 100%;
+      }
       `}</style>
     </div>
   )
